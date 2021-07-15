@@ -86,16 +86,15 @@ namespace it_utils {
 }
 
 namespace std {
-    using namespace it_utils;
     template<typename T>
-    struct tuple_size<enum_data<T>> : integral_constant<std::size_t, 2> {
+    struct tuple_size<::it_utils::enum_data<T>> : integral_constant<std::size_t, 2> {
     };
     template<typename T>
-    struct tuple_element<0, enum_data<T>> {
+    struct tuple_element<0, ::it_utils::enum_data<T>> {
         using type = std::size_t;
     };
     template<typename T>
-    struct tuple_element<1, enum_data<T>> {
+    struct tuple_element<1, ::it_utils::enum_data<T>> {
         using type = typename std::iterator_traits<T>::value_type;
     };
 

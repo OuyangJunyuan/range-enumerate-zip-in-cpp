@@ -2,10 +2,11 @@
 #include <vector>
 #include <map>
 #include <chrono>
+#include <iteration_utils/iteration_utils.hpp>
 #include "tools.h"
-#include "iteration_utils/iteration_utils.hpp"
 
 using namespace std;
+using namespace it_utils;
 #define N 1e7
 
 int main() {
